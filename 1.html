@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+
+<body>
+<h5 id="oopp"></h5>
+
+	<script>
+		isWeChatBrowser();
+		function isWeChatBrowser() {
+			var ua = navigator.userAgent.toLowerCase();
+			return ua.indexOf('micromessenger') !== -1;
+		}
+
+		if (isWeChatBrowser()) {
+			document.getElementById("oopp").innerHTML="请在右上角选择 -在浏览器打开-";
+		} else {
+			document.getElementById("oopp").innerHTML="正在打开...";
+			window.open("https://howdy.rf.gd/ad/1.hmtl","_self");
+			document.getElementById("oopp").innerHTML="正在打开...";
+
+		}
+	</script>
+</body>
+
+</html>
